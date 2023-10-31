@@ -1,24 +1,82 @@
-import React from "react"
+import { Link } from 'react-router-dom'
+import { useContext } from "react"
+import { UserContext } from "../context/UserContext"
 
 
 export const Navbar = () => {
-  return  (
-    <header>
-      <div class="logo">
-        <h1>TUMARKETPLACE</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Categorías</a></li>
-          <li><a href="#">Ofertas</a></li>
-          <li><a href="#">Mi cuenta</a></li>
-        </ul>
-      </nav>
-      <div class="cart">
-        <a href="#"><img src="https://e7.pngegg.com/pngimages/833/426/png-clipart-shopping-cart-shopping-cart.png" width="5px" height="5px" alt="Carrito de compras"/></a>
-      </div>
-    </header>
-        );
+
+    const { user,setUser } = useContext(UserContext);
+
+    const handleLogOut = () => {
+        setUser({
+            logged:false,
+            role: ''
+          })
+        console.log('salir')
     }
-export default Navbar
+
+    return (
+        <div>
+            <div class="header_section">
+                <div class="container">
+                    <nav className="navbar navbar-expand-lg navbar-light" data-bs-theme="dark">
+                        <a className="navbar-braknd" href="/#" > <img src={require(`../imagenes/um.png`) }  alt="" width="70px" height="70px" /></a> 
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                            
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            {
+                                //administrador
+                                user.role === '1' ? (
+                                    <ul className="navbar-nav ms-auto">
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/dashboard">Dashboard</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/userList">Usuarios registrados</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/addJob">Crear Oferta</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/offers">Ofertas</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/" onClick={handleLogOut} >Salir</Link>
+                                        </li>
+                                    </ul>
+                                //usuario
+                                ) : user.role === '2' ? (
+                                    <ul className="navbar-nav ms-auto">
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/offers">Ofertas</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/myApplications">Mis postulaciones</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/" onClick={handleLogOut} >Salir</Link>
+                                        </li>
+                                    </ul>
+                                ):(
+                                    <ul className="navbar-nav ms-auto">
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/home">Home</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" exact='true' to="/login">Login</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/register">Registro</Link>
+                                        </li>
+                                    </ul>
+                                ) 
+                            }           
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    )
+}
