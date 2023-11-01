@@ -20,7 +20,7 @@ export const Navbar = () => {
             <div class="header_section">
                 <div class="container">
                     <nav className="navbar navbar-expand-lg navbar-light" data-bs-theme="dark">
-                        <a className="navbar-braknd" href="/#" > <img src={require(`../imagenes/um.png`) }  alt="" width="70px" height="70px" /></a> 
+                        <a className="navbar-braknd" href="/#" > </a> 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>

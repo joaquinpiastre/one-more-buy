@@ -2,7 +2,6 @@ import { Field, Form, Formik } from 'formik'
 import axios from 'axios'
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2'
 import { UserContext } from '../context/UserContext';
 
 

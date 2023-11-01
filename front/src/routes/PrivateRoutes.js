@@ -8,7 +8,7 @@ import { UserList } from '../components/UserList';
 import { AddJob } from '../components/AddJob';
 
 
-export const PrivateRoutes = () => {
+const PrivateRoutes = () => {
   return (
     <Routes>
         <Route path="/dashboard" element={<Dashboard />} />

@@ -6,7 +6,7 @@ import { Register } from '../components/Register';
 import { Home } from '../components/Home';
 
 
-export const PublicRoutes = () => {
+const PublicRoutes = () => {
   return (
     <Routes>
         <Route path='/' element={<Home />} />
