@@ -9,8 +9,6 @@ import { AddProducts } from '../components/AddProducts/AddProducts.js';
 import { ProductList } from '../components/Productlist/ProductList';
 
 
-
-
 export const PrivateRoutes = () => {
   return (
     <Routes>

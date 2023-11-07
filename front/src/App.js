@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import { UserContext } from "./context/UserContext";
 import { PrivateRoutes } from './routes/PrivateRoutes';
-import {PublicRoutes} from "./routes/PublicRoutes";
+import { PublicRoutes } from "./routes/PublicRoutes";
 import { Navbar } from "./components/Navbar/Navbar"
 
 

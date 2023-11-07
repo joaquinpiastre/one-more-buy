@@ -1,14 +1,14 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import axios from "axios";
-import "../../components/Login/LoginForm.css";
+import "../../components/Login/Login.css";
 import {UserContext} from "../../context/UserContext";
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 
-export const LoginForm = () => {
+export const Login = () => {
   const navigate = useNavigate();
   const initialValues = {
     email: "",
@@ -84,4 +84,4 @@ export const LoginForm = () => {
     </div>
   );
 };
-export default LoginForm;
+export default Login;

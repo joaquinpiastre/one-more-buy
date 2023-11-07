@@ -4,7 +4,7 @@ from database import *
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from models.User import User
-from resurces.auth.routes import *
+from resources.auth.routes import *
 
 app = Flask(__name__)
 CORS(app)

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 
-export const AddProduct = () => {
+export const AddProducts = () => {
 
     const navigate = useNavigate();
 
