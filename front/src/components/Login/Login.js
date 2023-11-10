@@ -20,7 +20,7 @@ export const Login = () => {
   const handleForm = async (values) => {
     console.log("values:", values);
     try {
-      const response = await axios.post("http://localhost:5000/auth/login", values);
+      const response = await axios.post("http://127.0.0.1:5000/auth/login", values);
       console.log(response.data);
       const {role} = response.data
       console.log('role:', role)

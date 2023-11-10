@@ -18,10 +18,14 @@ db.init_app(app)
 migrate = Migrate()
 migrate.init_app(app,db)
 
+app.register_blueprint(auth)
+
 @app.route('/')
 def home():
     print('home')
     return jsonify({'mensaje': 'Home'})
+
+api.add_resource(JobsList , '/jobs')
 
 if __name__ == '__main__':
     app.run(debug=True)

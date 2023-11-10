@@ -3,7 +3,7 @@ from flask import request, jsonify
 from database import db
 from models.Product import Product
 
-
+ 
 class Product_list(Resource):
     
     def post(self):
@@ -34,4 +34,3 @@ class Product_list(Resource):
         response = jsonify(result)
         response.status_code = 200
         return response
-    
