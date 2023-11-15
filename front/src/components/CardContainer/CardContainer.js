@@ -1,5 +1,5 @@
 import React from 'react'
-import Marketplace from "/Data/Marketplace"
+import Marketplace from "../"
 import Card from '../Card/Card'
 import './CardContainer.css'
 
