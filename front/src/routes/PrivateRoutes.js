@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes} from "react-router-dom";
 import { User } from '../components/Usuario/User';
-import {Carro} from '../components/Carro/Carro.js';
+import {Card} from '../components/Card/Card.js';
 import { UserList } from '../components/UserList/UserList.js';
 import { Home } from '../components/Home/Home';
 import { Offers } from '../components/Offers/Offers';
@@ -13,10 +13,10 @@ export const PrivateRoutes = () => {
   return (
     <Routes>
         <Route path='/Home' element={ <Home />} />
-        <Route path='/perfil' element={ <User />} />
-        <Route path='/carro' element={<Carro />} />
-        <Route path='/userlist' element={<UserList />} />
-        <Route path='/offers' element={<Offers />} />
+        <Route path='/Perfil' element={ <User />} />
+        <Route path='/Card' element={<Card />} />
+        <Route path='/Userlist' element={<UserList />} />
+        <Route path='/Offers' element={<Offers />} />
         <Route path='/AddProducts' element={<AddProducts />} />
         <Route path='/ProductList' element={<ProductList />} />
         

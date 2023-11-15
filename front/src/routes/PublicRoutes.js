@@ -10,9 +10,9 @@ export const PublicRoutes = () => {
   return (
     <Routes>
         <Route path='/Home' element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path='*' element={<Navigate to='/login' replace />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path='*' element={<Navigate to='/Login' replace />} />
     </Routes>
   )
 }
