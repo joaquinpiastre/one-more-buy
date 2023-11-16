@@ -1,4 +1,4 @@
-from app import db
+from database import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -6,8 +6,6 @@ class User(db.Model):
     email = db.Column(db.String(250))
     password = db.Column(db.String(250))
     role = db.Column(db.String(250))
-    
-    userPostulations = db.relationship("Postulation", backref='user')
 
     #Método str permite obtener representacion de la clase User
     def __str__(self):

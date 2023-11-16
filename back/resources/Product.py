@@ -3,8 +3,8 @@ from flask import request, jsonify
 from database import db
 from models.Product import Product
 
- 
-class Product_list(Resource):
+
+class Products_resource(Resource):
     
     def post(self):
         name = request.json['name']
@@ -34,3 +34,25 @@ class Product_list(Resource):
         response = jsonify(result)
         response.status_code = 200
         return response
+
+class Product_resource(Resource):
+
+    def put(self, productId):
+
+        product = Product.query.get_or_404(productId)
+        product.name = request.json.get('name',product.name)
+        product.description = request.json.get('description',product.description)
+        product.price = request.json.get('price',product.price)
+        product.stock = request.json.get('stock',product.stock)
+        
+        print( product.name, product.description, product.price, product.stock)
+        
+        db.session.commit()
+        return jsonify({'mensaje': 'Producto editado con exito korean'})
+
+    def delete(self, productId):
+        product = Product.query.get(productId)
+        
+        db.session.delete(product)
+        db.session.commit()
+        return jsonify({'mensaje': 'Vino eliminado con éxito GG korea'})

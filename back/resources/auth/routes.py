@@ -26,13 +26,13 @@ def login():
     
 @auth.route('/register', methods=['POST'])
 def register():
-    name = request.json['name']
+    """name = request.json['name']"""
     email = request.json['email']
     password = request.json['password']
     role = '2'
-    print(name, email, password, role)
+    print( email, password, role)
     
-    user = User(name=name, email=email, password=password, role=role)
+    user = User(email=email, password=password, role=role)
     db.session.add(user)
     db.session.commit()
     return jsonify(role=role),200

@@ -1,16 +1,16 @@
 import React from 'react'
-import Marketplace from "../"
+import Productos from "../../Data/Productos"
 import Card from '../Card/Card'
 import './CardContainer.css'
 
 export const CardContainer = () => {
     return (
       <div>
-          {Marketplace.map((producto) =>{
+          {Productos.map((producto) =>{
                 return(<Card key={producto.id} producto={producto} />)
               
           })}
       </div>
     )
   }
-export default CardContainer
+export default CardContainer;

@@ -34,7 +34,7 @@ export const Login = () => {
         logged: true,
         role: role,
       });
-      navigate('/Home')
+      navigate("/")
     } catch (error) {
       console.log(error);
     }
