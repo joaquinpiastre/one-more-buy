@@ -1,4 +1,3 @@
-import './ProductList.css'
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
@@ -36,7 +35,7 @@ export const ProductList = () => {
                     <table className="table">
                         <thead>
                             <tr>
-                                <th scope="col">Nombre del vino</th>
+                                <th scope="col">Nombre del producto</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Stock</th>
                                 <th scope="col">Descripcion</th>

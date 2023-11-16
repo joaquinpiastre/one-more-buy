@@ -9,9 +9,9 @@ import { Home } from '../components/Home/Home';
 export const PublicRoutes = () => {
   return (
     <Routes>
-        <Route path='/Home' element={<Home />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
+        <Route path='/home' element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path='*' element={<Navigate to='/Login' replace />} />
     </Routes>
   )

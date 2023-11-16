@@ -45,10 +45,10 @@ export const Navbar = () => {
                                 ) : user.role === '2' ? (
                                     <ul className="navbar-nav ms-auto">
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/Profile">Perfil</Link>
+                                            <Link className="nav-link" to="/Usuario">Perfil</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/Offers">Comprar Vino</Link>
+                                            <Link className="nav-link" to="/Offers">Productos</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="/Home">Home</Link>

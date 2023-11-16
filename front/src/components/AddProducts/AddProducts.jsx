@@ -1,10 +1,11 @@
+
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 
-export const AddProducts = () => {
+export const AddProduct = () => {
 
     const navigate = useNavigate();
 
@@ -18,7 +19,7 @@ export const AddProducts = () => {
     const handleSubmit = async( values) => {
         
         try {
-            const response = await axios.post('http://localhost:5000/product', values)
+            const response = await axios.post('http://localhost:5000/products', values)
             console.log(response.data)
             Swal.fire({
                 icon: 'success',
@@ -49,7 +50,7 @@ export const AddProducts = () => {
                         placeholder="Nombre producto" 
                         name='name'
                         />
-                        <label htmlFor="floatingName">Nombre del Prosucto</label>
+                        <label htmlFor="floatingName">Nombre del vino</label>
                     </div>
                     <div className="form-floating">
                         <Field 
@@ -79,9 +80,9 @@ export const AddProducts = () => {
                         placeholder="Nombre producto" 
                         name='description'
                         />
-                        <label htmlFor="floatingName">Descripción del Producto</label>
+                        <label htmlFor="floatingName">Descripción del vino</label>
                     </div>
-                    <button className="btn btn-primary w-100 py-2" type="submit" onClick={handleSubmit}>Agregar Producto</button>
+                    <button className="btn btn-primary w-100 py-2" type="submit" onClick={handleSubmit}>Agregar vino</button>
                 </Form>
             </Formik>
             </div>
