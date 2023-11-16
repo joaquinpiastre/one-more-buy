@@ -4,7 +4,6 @@ import "./Card.css";
 export const Card = ({ Producto }) => {
   return (
     <div className="CardContainer">
-        <img src={Producto.imagen} alt={Producto.id} />
       <div className="textContainer">
         <p className="priceText">{Producto.titulo}</p>
         <p className="priceText">{Producto.descripcion}</p>

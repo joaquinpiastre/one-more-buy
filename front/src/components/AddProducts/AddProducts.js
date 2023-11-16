@@ -36,7 +36,7 @@ export const AddProduct = () => {
         <div>
             <div className='row justify-content-center'> 
             <div className='col-md-6'>
-            <h1>Crear oferta de Vino</h1>
+            <h1>Crear oferta de Producto</h1>
             <Formik
                 initialValues={initialValues}
                 onSubmit={handleSubmit}
@@ -50,7 +50,7 @@ export const AddProduct = () => {
                         placeholder="Nombre producto" 
                         name='name'
                         />
-                        <label htmlFor="floatingName">Nombre del vino</label>
+                        <label htmlFor="floatingName">Nombre del producto</label>
                     </div>
                     <div className="form-floating">
                         <Field 
@@ -80,9 +80,9 @@ export const AddProduct = () => {
                         placeholder="Nombre producto" 
                         name='description'
                         />
-                        <label htmlFor="floatingName">Descripción del vino</label>
+                        <label htmlFor="floatingName">Descripción del Producto</label>
                     </div>
-                    <button className="btn btn-primary w-100 py-2" type="submit" onClick={handleSubmit}>Agregar vino</button>
+                    <button className="btn btn-primary w-100 py-2" type="submit" onClick={handleSubmit}>Agregar Producto</button>
                 </Form>
             </Formik>
             </div>

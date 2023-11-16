@@ -23,16 +23,16 @@ export const Navbar = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             {
                                 //administrador
-                                user.role === '1' ? (
+                                user.role === '2' ? (
                                     <ul className="navbar-nav ms-auto">
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/userList">Lista de Usuarios</Link>
+                                            <Link className="nav-link" to="/UserList">Lista de Usuarios</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/Offers">Ofertas creadas</Link>
+                                            <Link className="nav-link" to="/products">Productos</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/AddProduct">Crear Oferta</Link>
+                                            <Link className="nav-link" to="/AddProduct">Crear Producto</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="/Home">Home</Link>
@@ -42,13 +42,13 @@ export const Navbar = () => {
                                         </li>
                                     </ul>
                                 //usuario
-                                ) : user.role === '2' ? (
+                                ) : user.role === '0' ? (
                                     <ul className="navbar-nav ms-auto">
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/Usuario">Perfil</Link>
+                                            <Link className="nav-link" to="/MyBuys">Carrito</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/Offers">Productos</Link>
+                                            <Link className="nav-link" to="/ProductList">Productos</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="/Home">Home</Link>
