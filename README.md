@@ -1,2 +1,3 @@
 # one-more-buy 
-Joaquin Piastrellini Alvaro Bittar
+Integrantes:
+Joaquin Piastrellini y Alvaro Bittar
