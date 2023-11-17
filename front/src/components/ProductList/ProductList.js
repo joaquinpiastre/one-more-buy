@@ -57,16 +57,10 @@ export const ProductList = () => {
       };
 
 
-   //Editar empleo
-
-    //Carga los "valores" del trabajo en la ventana modal (name, description, experience)
     const onEditProduct = (product) => {
         setEditedProduct(product);
     };
-    
-    // Actualiza los campos que se editaron dentro de la ventana modal
-    //[e.target.name] es nombre del campo que sufrio un cambio 
-    // e.target.value es valor ingresado por el usuario. 
+
     const handleInputChange = (e) => {
         console.log('valor de e.target.name', e.target.name)
         console.log('valor de e.target.value', e.target.value)
@@ -116,7 +110,7 @@ export const ProductList = () => {
                                         <td>{product.stock}</td>
                                         <td>{product.description}</td>
                                         {
-                                            // usuario comun solo puede postularse a la oferta
+                                            // usuario comun solo puede postularse a la oferta(Funcionan las rutas pero es unicamente para admin)
                                             user.role === '0' ? (
                                                 <div>
                                                     <td> 

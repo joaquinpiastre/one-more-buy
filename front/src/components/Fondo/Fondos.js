@@ -6,7 +6,7 @@ export function Fondo() {
     <div>
 	<body>
 		<header>
-			<h1>Marketplace</h1>
+			<h1>One More Buy</h1>
 				<div>
 			</div>
 		</header>
